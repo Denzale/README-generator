@@ -96,7 +96,10 @@ ${data.installation}
 ## Usage:
 ${data.usage}
 ## License:
-${data.license}
+    For more information about the License, click the link below.
+
+    -[License](http://opernsource.org/licenses/${data.license})
+    
 ## Contributing
 ${data.contributing}
 ## Test
