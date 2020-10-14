@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const Choices = require("inquirer/lib/objects/choices");
+
 
 
 inquirer
@@ -31,7 +31,7 @@ inquirer
         {
             type: "list",
             name: "license",
-            message: "of licenses what are using?"
+            message: "of licenses what are using?",
             choices: [
                 "Apache",
                 "MIT",
@@ -79,33 +79,33 @@ inquirer
 
 function generateREADME(data) {
     const md = `# ${data.title}
-    # Table of Contents
+# Table of Contents
     
-    -[Description](#description)
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[License](#license)
-    -[Contributing](#contributing)
-    -[Tests](#tests)
-    -[Questions](#questions)
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[License](#license)
+-[Contributing](#contributing)
+-[Tests](#tests)
+-[Questions](#questions)
 
 ## Description:
-    ${data.description}
+${data.description}
 ## Installation:
-    ${data.installation}
+${data.installation}
 ## Usage:
-    ${data.usage}
+${data.usage}
 ## License:
-
+${data.license}
 ## Contributing
-    ${data.contributing}
+${data.contributing}
 ## Test
-    ${data.test}
+${data.test}
 ## Question
-    If you have any questions you can go to my Github page through this link:
-    -[Github](http://github.com/${data.github})
+If you have any questions you can go to my Github page through this link:
+-[Github](http://github.com/${data.github})
 
-    For additional questions please reach out to my email at: ${data.email}.
+For additional questions please reach out to my email at: ${data.email}.
 `;
     return md;
 }
