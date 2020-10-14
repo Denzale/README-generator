@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const Choices = require("inquirer/lib/objects/choices");
+
 
 inquirer
     .prompt([
@@ -25,6 +27,16 @@ inquirer
             type: "input",
             name: "usage",
             message: "How would you like your application to be used?"
+        },
+        {
+            type: "list",
+            name: "license",
+            message: "of licenses what are using?"
+            choices: [
+                "Apache",
+                "MIT",
+                "ISC"
+            ],
         },
         {
             type: "input",
